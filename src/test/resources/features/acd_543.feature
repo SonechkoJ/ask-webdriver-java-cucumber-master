@@ -105,7 +105,6 @@ Feature: Regression for search engines
     Then I wait for 3 sec
 
   @prededined10
-    #Need help!!!
   Scenario: Search engine via ekoru
     Given I open url "https://ekoru.org/"
     Then I should see page title contains "Ekoru"
@@ -113,7 +112,6 @@ Feature: Regression for search engines
     When I type "russian ecology" into element with xpath "//input[@id='fld_q']"
     And I click on element with xpath "//div[@id='btn_search']"
     Then I wait for element with xpath "//div[@id='serp_organic']" to be present
-    Then element with xpath "//div[@id='serp_organic']" should contain text "russian ecology"
     Then I wait for 3 sec
-
+    Then element with xpath "//div[@id='serp_organic']" should contain text "russian ecology"
 
